@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,9 @@
 
 <body>
 
-    <!-- ================= LOGIN SCREEN ================= -->
+    <!-- =====================================================
+         LOGIN SCREEN
+         ===================================================== -->
 
     <section id="loginScreen" class="login-screen">
 
@@ -34,30 +37,23 @@
                 Motorcycle Online Store
             </p>
 
-            <!-- LOGIN TYPE -->
-
             <div class="login-tabs">
 
                 <button
                     id="customerTab"
                     class="tab active"
                     onclick="showLogin('customer')">
-
                     Customer Login
-
                 </button>
 
                 <button
                     id="adminTab"
                     class="tab"
                     onclick="showLogin('admin')">
-
                     Admin Login
-
                 </button>
 
             </div>
-
 
             <!-- CUSTOMER LOGIN -->
 
@@ -78,9 +74,7 @@
                 <button
                     class="primary-btn"
                     onclick="customerLogin()">
-
                     Login
-
                 </button>
 
                 <p>
@@ -88,14 +82,11 @@
                     <span
                         class="link"
                         onclick="showRegister()">
-
                         Create Customer Account
-
                     </span>
                 </p>
 
             </div>
-
 
             <!-- ADMIN LOGIN -->
 
@@ -116,13 +107,10 @@
                 <button
                     class="admin-btn"
                     onclick="adminLogin()">
-
                     Admin Login
-
                 </button>
 
             </div>
-
 
             <!-- CUSTOMER REGISTER -->
 
@@ -155,9 +143,7 @@
                 <button
                     class="primary-btn"
                     onclick="registerCustomer()">
-
                     Create Account
-
                 </button>
 
                 <p>
@@ -165,9 +151,7 @@
                     <span
                         class="link"
                         onclick="showLogin('customer')">
-
                         Login
-
                     </span>
                 </p>
 
@@ -178,7 +162,9 @@
     </section>
 
 
-    <!-- ================= OTP SCREEN ================= -->
+    <!-- =====================================================
+         OTP SCREEN
+         ===================================================== -->
 
     <section
         id="otpScreen"
@@ -201,22 +187,19 @@
                 id="otpInput"
                 type="text"
                 maxlength="6"
+                inputmode="numeric"
                 placeholder="Enter OTP">
 
             <button
                 class="primary-btn"
                 onclick="verifyOTP()">
-
                 Verify OTP
-
             </button>
 
             <button
                 class="secondary-btn"
                 onclick="resendOTP()">
-
                 Resend OTP
-
             </button>
 
         </div>
@@ -224,7 +207,9 @@
     </section>
 
 
-    <!-- ================= MAIN SYSTEM ================= -->
+    <!-- =====================================================
+         MAIN SYSTEM
+         ===================================================== -->
 
     <section
         id="systemScreen"
@@ -238,6 +223,8 @@
                 YAMAHA
                 <span>STORE</span>
             </div>
+
+            <!-- ADMIN NAV -->
 
             <nav id="adminNav">
 
@@ -271,6 +258,7 @@
 
             </nav>
 
+            <!-- CUSTOMER NAV -->
 
             <nav
                 id="customerNav"
@@ -286,13 +274,10 @@
 
             </nav>
 
-
             <button
                 class="logout-btn"
                 onclick="logout()">
-
                 Logout
-
             </button>
 
         </aside>
@@ -310,8 +295,7 @@
                     </h2>
                 </div>
 
-                <div id="userInfo">
-                </div>
+                <div id="userInfo"></div>
 
             </header>
 
@@ -346,7 +330,9 @@
 
                     <div class="stat-card">
                         <h3>Total Sales</h3>
-                        <strong id="statSales">₱0</strong>
+                        <strong id="statSales">
+                            ₱0
+                        </strong>
                     </div>
 
                 </div>
@@ -367,9 +353,7 @@
                     <button
                         class="primary-btn"
                         onclick="openProductModal()">
-
                         + Add Product
-
                     </button>
 
                 </div>
@@ -473,11 +457,15 @@
                 id="customerProductsPage"
                 class="page hidden">
 
-                <h2>Yamaha Products</h2>
+                <div class="section-header">
 
-                <div id="customerProductGrid"
-                     class="product-grid">
+                    <h2>Yamaha Products</h2>
 
+                </div>
+
+                <div
+                    id="customerProductGrid"
+                    class="product-grid">
                 </div>
 
             </section>
@@ -500,7 +488,9 @@
     </section>
 
 
-    <!-- ================= PRODUCT MODAL ================= -->
+    <!-- =====================================================
+         PRODUCT MODAL
+         ===================================================== -->
 
     <div
         id="productModal"
@@ -518,47 +508,92 @@
 
             <input
                 id="productName"
+                type="text"
                 placeholder="Product Name">
 
             <input
                 id="productCategory"
+                type="text"
                 placeholder="Category">
 
             <textarea
                 id="productDescription"
-                placeholder="Description">
-            </textarea>
+                placeholder="Description"></textarea>
 
             <input
                 id="productPrice"
                 type="number"
+                min="0"
                 placeholder="Price">
 
             <input
                 id="productStock"
                 type="number"
+                min="0"
                 placeholder="Stock">
 
-            <input
-                id="productImage"
-                placeholder="Image URL">
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-image-upload">
+
+                <label for="productImage">
+                    Product Image
+                </label>
+
+                <input
+                    id="productImage"
+                    type="file"
+                    accept="image/*"
+                    onchange="previewProductImage(event)">
+
+                <div
+                    id="productImagePreview"
+                    class="product-image-preview empty">
+
+                    <span
+                        id="imagePreviewText">
+                        Select product image
+                    </span>
+
+                    <img
+                        id="productPreviewImg"
+                        class="hidden"
+                        src=""
+                        alt="Product Preview">
+
+                    <button
+                        type="button"
+                        id="removeProductImage"
+                        class="remove-product-image hidden"
+                        onclick="removeProductImagePreview()">
+                        ×
+                    </button>
+
+                </div>
+
+                <!-- SAVED IMAGE URL -->
+
+                <input
+                    id="productImageUrl"
+                    type="hidden">
+
+            </div>
+
+
+            <!-- ACTIONS -->
 
             <div class="modal-actions">
 
                 <button
                     class="primary-btn"
                     onclick="saveProduct()">
-
                     Save
-
                 </button>
 
                 <button
                     class="secondary-btn"
                     onclick="closeProductModal()">
-
                     Cancel
-
                 </button>
 
             </div>
@@ -568,7 +603,9 @@
     </div>
 
 
-    <!-- ================= ADMIN PASSCODE MODAL ================= -->
+    <!-- =====================================================
+         ADMIN PASSCODE MODAL
+         ===================================================== -->
 
     <div
         id="passcodeModal"
@@ -590,17 +627,13 @@
             <button
                 class="primary-btn"
                 onclick="confirmPasscode()">
-
                 Verify
-
             </button>
 
             <button
                 class="secondary-btn"
                 onclick="closePasscodeModal()">
-
                 Cancel
-
             </button>
 
         </div>
@@ -608,15 +641,19 @@
     </div>
 
 
+    <!-- TOAST -->
+
     <div
         id="toast"
         class="toast">
-
     </div>
 
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
 </body>
 
 </html>
+```
