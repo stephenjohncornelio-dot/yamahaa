@@ -11,7 +11,7 @@
  */
 
 const APP_URL =
-    "https://script.google.com/macros/s/AKfycbz9NMmGtXxjlbznL1bDveb-NV0BrDG7MpE7urEFhIJsWR6hmzSbHkinb8h_S2G-3fmA/exec";
+    "https://script.google.com/macros/s/AKfycbyXfcd8vzahND-1JZ4rVz6trKG273s6r6iyHyayZAEwD3xZ5nPgJ52GH2cFKpiyOY8G/exec";
 
 
 /****************************************************
