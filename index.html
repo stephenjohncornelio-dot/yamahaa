@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Yamaha Store</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN SCREEN ================= -->
+
+    <section id="loginScreen" class="login-screen">
+
+        <div class="login-card">
+
+            <div class="logo">
+                YAMAHA
+                <span>STORE</span>
+            </div>
+
+            <h1>Yamaha Store</h1>
+
+            <p class="subtitle">
+                Motorcycle Online Store
+            </p>
+
+            <!-- LOGIN TYPE -->
+
+            <div class="login-tabs">
+
+                <button
+                    id="customerTab"
+                    class="tab active"
+                    onclick="showLogin('customer')">
+
+                    Customer Login
+
+                </button>
+
+                <button
+                    id="adminTab"
+                    class="tab"
+                    onclick="showLogin('admin')">
+
+                    Admin Login
+
+                </button>
+
+            </div>
+
+
+            <!-- CUSTOMER LOGIN -->
+
+            <div
+                id="customerLogin"
+                class="login-form">
+
+                <input
+                    id="customerEmail"
+                    type="email"
+                    placeholder="Customer Gmail">
+
+                <input
+                    id="customerPassword"
+                    type="password"
+                    placeholder="Password">
+
+                <button
+                    class="primary-btn"
+                    onclick="customerLogin()">
+
+                    Login
+
+                </button>
+
+                <p>
+                    No account?
+                    <span
+                        class="link"
+                        onclick="showRegister()">
+
+                        Create Customer Account
+
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- ADMIN LOGIN -->
+
+            <div
+                id="adminLogin"
+                class="login-form hidden">
+
+                <input
+                    id="adminEmail"
+                    type="email"
+                    placeholder="Admin Gmail">
+
+                <input
+                    id="adminPassword"
+                    type="password"
+                    placeholder="Admin Password">
+
+                <button
+                    class="admin-btn"
+                    onclick="adminLogin()">
+
+                    Admin Login
+
+                </button>
+
+            </div>
+
+
+            <!-- CUSTOMER REGISTER -->
+
+            <div
+                id="registerForm"
+                class="login-form hidden">
+
+                <h2>Create Customer Account</h2>
+
+                <input
+                    id="registerName"
+                    type="text"
+                    placeholder="Full Name">
+
+                <input
+                    id="registerEmail"
+                    type="email"
+                    placeholder="Gmail Address">
+
+                <input
+                    id="registerPassword"
+                    type="password"
+                    placeholder="Password">
+
+                <input
+                    id="registerPassword2"
+                    type="password"
+                    placeholder="Confirm Password">
+
+                <button
+                    class="primary-btn"
+                    onclick="registerCustomer()">
+
+                    Create Account
+
+                </button>
+
+                <p>
+                    Already have an account?
+                    <span
+                        class="link"
+                        onclick="showLogin('customer')">
+
+                        Login
+
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OTP SCREEN ================= -->
+
+    <section
+        id="otpScreen"
+        class="otp-screen hidden">
+
+        <div class="otp-card">
+
+            <div class="logo">
+                YAMAHA
+                <span>STORE</span>
+            </div>
+
+            <h2>Email Verification</h2>
+
+            <p>
+                Enter the 6-digit OTP sent to your Gmail.
+            </p>
+
+            <input
+                id="otpInput"
+                type="text"
+                maxlength="6"
+                placeholder="Enter OTP">
+
+            <button
+                class="primary-btn"
+                onclick="verifyOTP()">
+
+                Verify OTP
+
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="resendOTP()">
+
+                Resend OTP
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN SYSTEM ================= -->
+
+    <section
+        id="systemScreen"
+        class="system hidden">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                YAMAHA
+                <span>STORE</span>
+            </div>
+
+            <nav id="adminNav">
+
+                <button onclick="openPage('dashboard')">
+                    Dashboard
+                </button>
+
+                <button onclick="openPage('products')">
+                    Products
+                </button>
+
+                <button onclick="openPage('inventory')">
+                    Inventory
+                </button>
+
+                <button onclick="openPage('customers')">
+                    Customers
+                </button>
+
+                <button onclick="openPage('orders')">
+                    Orders / Sales
+                </button>
+
+                <button onclick="openPage('reports')">
+                    Reports
+                </button>
+
+                <button onclick="openPage('security')">
+                    Security / Settings
+                </button>
+
+            </nav>
+
+
+            <nav
+                id="customerNav"
+                class="hidden">
+
+                <button onclick="openPage('customerProducts')">
+                    Products
+                </button>
+
+                <button onclick="openPage('customerOrders')">
+                    My Orders
+                </button>
+
+            </nav>
+
+
+            <button
+                class="logout-btn"
+                onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h2 id="pageTitle">
+                        Dashboard
+                    </h2>
+                </div>
+
+                <div id="userInfo">
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+
+            <section
+                id="dashboardPage"
+                class="page">
+
+                <div class="cards">
+
+                    <div class="stat-card">
+                        <h3>Products</h3>
+                        <strong id="statProducts">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Customers</h3>
+                        <strong id="statCustomers">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Orders</h3>
+                        <strong id="statOrders">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Stock</h3>
+                        <strong id="statStock">0</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Total Sales</h3>
+                        <strong id="statSales">₱0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRODUCTS -->
+
+            <section
+                id="productsPage"
+                class="page hidden">
+
+                <div class="section-header">
+
+                    <h2>Products</h2>
+
+                    <button
+                        class="primary-btn"
+                        onclick="openProductModal()">
+
+                        + Add Product
+
+                    </button>
+
+                </div>
+
+                <div id="productTable"></div>
+
+            </section>
+
+
+            <!-- INVENTORY -->
+
+            <section
+                id="inventoryPage"
+                class="page hidden">
+
+                <h2>Inventory</h2>
+
+                <div id="inventoryTable"></div>
+
+            </section>
+
+
+            <!-- CUSTOMERS -->
+
+            <section
+                id="customersPage"
+                class="page hidden">
+
+                <h2>Customers</h2>
+
+                <div id="customerTable"></div>
+
+            </section>
+
+
+            <!-- ORDERS -->
+
+            <section
+                id="ordersPage"
+                class="page hidden">
+
+                <h2>Orders / Sales</h2>
+
+                <div id="ordersTable"></div>
+
+            </section>
+
+
+            <!-- REPORTS -->
+
+            <section
+                id="reportsPage"
+                class="page hidden">
+
+                <h2>Reports</h2>
+
+                <div id="reportsContent"></div>
+
+            </section>
+
+
+            <!-- SECURITY -->
+
+            <section
+                id="securityPage"
+                class="page hidden">
+
+                <h2>Security / Settings</h2>
+
+                <div class="security-box">
+
+                    <h3>Yamaha Store Security</h3>
+
+                    <p>
+                        Admin login requires Gmail,
+                        password and OTP.
+                    </p>
+
+                    <p>
+                        Add, Update and Delete Product
+                        requires Admin Passcode.
+                    </p>
+
+                    <p>
+                        Customer accounts require
+                        Gmail OTP verification.
+                    </p>
+
+                    <strong>
+                        Security Status: ACTIVE
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMER PRODUCTS -->
+
+            <section
+                id="customerProductsPage"
+                class="page hidden">
+
+                <h2>Yamaha Products</h2>
+
+                <div id="customerProductGrid"
+                     class="product-grid">
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMER ORDERS -->
+
+            <section
+                id="customerOrdersPage"
+                class="page hidden">
+
+                <h2>My Orders</h2>
+
+                <div id="customerOrdersTable"></div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= PRODUCT MODAL ================= -->
+
+    <div
+        id="productModal"
+        class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2 id="modalTitle">
+                Add Product
+            </h2>
+
+            <input
+                id="productId"
+                type="hidden">
+
+            <input
+                id="productName"
+                placeholder="Product Name">
+
+            <input
+                id="productCategory"
+                placeholder="Category">
+
+            <textarea
+                id="productDescription"
+                placeholder="Description">
+            </textarea>
+
+            <input
+                id="productPrice"
+                type="number"
+                placeholder="Price">
+
+            <input
+                id="productStock"
+                type="number"
+                placeholder="Stock">
+
+            <input
+                id="productImage"
+                placeholder="Image URL">
+
+            <div class="modal-actions">
+
+                <button
+                    class="primary-btn"
+                    onclick="saveProduct()">
+
+                    Save
+
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    onclick="closeProductModal()">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADMIN PASSCODE MODAL ================= -->
+
+    <div
+        id="passcodeModal"
+        class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>Admin Security</h2>
+
+            <p>
+                Enter Admin Passcode to continue.
+            </p>
+
+            <input
+                id="adminPasscode"
+                type="password"
+                placeholder="Admin Passcode">
+
+            <button
+                class="primary-btn"
+                onclick="confirmPasscode()">
+
+                Verify
+
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="closePasscodeModal()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="toast"
+        class="toast">
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
