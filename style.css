@@ -1,7 +1,6 @@
-```css
+```css id="4hj8sm"
 /* =========================================================
-   YAMAHA STORE - FULL RESPONSIVE DESIGN
-   CSS ONLY
+   YAMAHA STORE - FULL RESPONSIVE CSS
    ========================================================= */
 
 * {
@@ -19,8 +18,6 @@ body {
     background: #f4f4f4;
     color: #222;
 }
-
-/* ================= GENERAL ================= */
 
 .hidden {
     display: none !important;
@@ -54,7 +51,7 @@ input:focus,
 textarea:focus,
 select:focus {
     border-color: #e60012;
-    box-shadow: 0 0 0 3px rgba(230, 0, 18, .08);
+    box-shadow: 0 0 0 3px rgba(230,0,18,.08);
 }
 
 textarea {
@@ -66,14 +63,19 @@ img {
     max-width: 100%;
 }
 
-/* ================= LOGIN ================= */
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
 
 .login-screen {
     min-height: 100vh;
     min-height: 100svh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 20px;
 
     background:
@@ -88,24 +90,34 @@ img {
 .login-card {
     width: 430px;
     max-width: 100%;
+
     background: #fff;
+
     padding: 38px;
+
     border-radius: 18px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5);
+
     text-align: center;
 }
 
 .logo {
     font-size: 34px;
     font-weight: 900;
+
     letter-spacing: 4px;
+
     color: #e60012;
 }
 
 .logo span {
     display: block;
+
     font-size: 14px;
     letter-spacing: 7px;
+
     margin-top: 4px;
 }
 
@@ -126,9 +138,13 @@ img {
 
 .tab {
     flex: 1;
+
     padding: 12px;
+
     background: #eee;
+
     border-radius: 8px;
+
     font-weight: 600;
 }
 
@@ -143,22 +159,30 @@ img {
 
 .login-form p {
     margin-top: 15px;
+
     color: #777;
+
     line-height: 1.5;
 }
 
 .link {
     color: #e60012;
+
     font-weight: bold;
+
     cursor: pointer;
 }
 
 .primary-btn {
     width: 100%;
+
     padding: 13px;
+
     background: #e60012;
     color: white;
+
     border-radius: 8px;
+
     font-weight: bold;
 }
 
@@ -168,10 +192,14 @@ img {
 
 .admin-btn {
     width: 100%;
+
     padding: 13px;
+
     background: #111;
     color: white;
+
     border-radius: 8px;
+
     font-weight: bold;
 }
 
@@ -181,10 +209,14 @@ img {
 
 .secondary-btn {
     width: 100%;
+
     padding: 13px;
+
     background: #eee;
     color: #222;
+
     border-radius: 8px;
+
     margin-top: 10px;
 }
 
@@ -192,14 +224,20 @@ img {
     background: #ddd;
 }
 
-/* ================= OTP ================= */
+
+/* =========================================================
+   OTP
+   ========================================================= */
 
 .otp-screen {
     min-height: 100vh;
     min-height: 100svh;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 20px;
 
     background:
@@ -213,11 +251,17 @@ img {
 .otp-card {
     width: 400px;
     max-width: 100%;
+
     background: white;
+
     padding: 40px;
+
     border-radius: 18px;
+
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5);
 }
 
 .otp-card h2 {
@@ -226,62 +270,88 @@ img {
 
 .otp-card p {
     color: #777;
+
     margin-bottom: 20px;
+
     line-height: 1.5;
 }
 
-/* ================= SYSTEM ================= */
+
+/* =========================================================
+   SYSTEM
+   ========================================================= */
 
 .system {
     min-height: 100vh;
+
     display: flex;
+
     background: #f4f4f4;
 }
 
-/* ================= SIDEBAR ================= */
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
 
 .sidebar {
     width: 240px;
     min-height: 100vh;
 
     background: #101010;
+
     padding: 25px 15px;
+
     color: white;
 
     position: fixed;
+
     left: 0;
     top: 0;
     bottom: 0;
 
     z-index: 50;
+
     overflow-y: auto;
 }
 
 .sidebar-logo {
     font-size: 25px;
+
     font-weight: bold;
+
     color: #e60012;
+
     text-align: center;
+
     margin-bottom: 35px;
 }
 
 .sidebar-logo span {
     display: block;
+
     font-size: 11px;
+
     letter-spacing: 5px;
+
     color: white;
 }
 
 .sidebar nav button {
     width: 100%;
+
     padding: 13px;
+
     margin-bottom: 6px;
 
     background: transparent;
+
     color: white;
 
     text-align: left;
+
     border-radius: 7px;
+
     font-size: 14px;
 }
 
@@ -291,16 +361,20 @@ img {
 
 .logout-btn {
     position: absolute;
+
     bottom: 25px;
+
     left: 15px;
     right: 15px;
 
     padding: 13px;
 
     background: #e60012;
+
     color: white;
 
     border-radius: 7px;
+
     font-weight: bold;
 }
 
@@ -308,26 +382,35 @@ img {
     background: #c90010;
 }
 
-/* ================= MAIN CONTENT ================= */
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
 .main-content {
     margin-left: 240px;
+
     width: calc(100% - 240px);
+
     min-height: 100vh;
 }
 
 .topbar {
     background: white;
+
     padding: 20px 30px;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     border-bottom: 1px solid #ddd;
 
     position: sticky;
+
     top: 0;
+
     z-index: 30;
 }
 
@@ -344,44 +427,60 @@ img {
     padding: 30px;
 }
 
-/* ================= DASHBOARD ================= */
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
 
 .cards {
     display: grid;
+
     grid-template-columns:
         repeat(auto-fit, minmax(180px, 1fr));
+
     gap: 18px;
 }
 
 .stat-card {
     background: white;
+
     padding: 25px;
+
     border-radius: 12px;
 
-    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.06);
 
     border-left: 4px solid #e60012;
 }
 
 .stat-card h3 {
     color: #777;
+
     margin-bottom: 15px;
+
     font-size: 15px;
 }
 
 .stat-card strong {
     font-size: 30px;
+
     color: #111;
 }
 
-/* ================= SECTION HEADER ================= */
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
 
 .section-header {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     gap: 15px;
+
     margin-bottom: 20px;
 }
 
@@ -391,38 +490,50 @@ img {
 
 .section-header .primary-btn {
     width: auto;
+
     padding: 12px 20px;
 }
 
-/* ================= TABLE ================= */
+
+/* =========================================================
+   TABLE
+   ========================================================= */
 
 .table-wrapper {
     overflow-x: auto;
 
     background: white;
+
     border-radius: 12px;
 
-    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.05);
 }
 
 table {
     width: 100%;
+
     min-width: 650px;
+
     border-collapse: collapse;
 }
 
 th,
 td {
     padding: 13px;
+
     border-bottom: 1px solid #eee;
 
     text-align: left;
+
     vertical-align: middle;
 }
 
 th {
     background: #111;
+
     color: white;
+
     white-space: nowrap;
 }
 
@@ -434,36 +545,49 @@ tr:hover td {
     background: #fafafa;
 }
 
-/* ================= ADMIN PRODUCT IMAGE ================= */
+
+/* =========================================================
+   ADMIN PRODUCT IMAGE
+   ========================================================= */
 
 .table-wrapper img,
 table img,
 .product-table-img,
 .admin-product-img {
     width: 70px;
-    height: 55px;
+    height: 60px;
 
     object-fit: contain;
+
     object-position: center;
 
     display: block;
 
-    background: #fff;
+    background: white;
+
     border: 1px solid #eee;
+
     border-radius: 8px;
 }
 
-/* ================= ACTION BUTTONS ================= */
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
 
 .action-btn {
     padding: 8px 12px;
+
     border-radius: 5px;
+
     margin-right: 4px;
+
     font-size: 13px;
 }
 
 .edit-btn {
     background: #222;
+
     color: white;
 }
 
@@ -473,6 +597,7 @@ table img,
 
 .delete-btn {
     background: #e60012;
+
     color: white;
 }
 
@@ -480,7 +605,10 @@ table img,
     background: #c90010;
 }
 
-/* ================= PRODUCT GRID ================= */
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
 
 .product-grid {
     display: grid;
@@ -491,15 +619,20 @@ table img,
     gap: 22px;
 }
 
-/* ================= PRODUCT CARD ================= */
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
 
 .product-card {
     background: white;
+
     border-radius: 14px;
 
     overflow: hidden;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.08);
 
     transition: .25s ease;
 
@@ -508,35 +641,31 @@ table img,
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,.14);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.14);
 }
 
-.product-card img {
-    width: 100%;
-    height: 190px;
-
-    object-fit: contain;
-    object-position: center;
-
-    display: block;
-
-    background: #fff;
-}
-
+.product-card img,
 .product-card .product-image,
 .product-card .product-img {
     width: 100%;
+
     height: 190px;
 
     object-fit: contain;
+
     object-position: center;
 
     display: block;
 
-    background: #fff;
+    background: white;
 }
 
-/* ================= PRODUCT CARD BODY ================= */
+
+/* =========================================================
+   PRODUCT CARD BODY
+   ========================================================= */
 
 .product-card-body {
     padding: 18px;
@@ -544,27 +673,38 @@ table img,
 
 .product-card h3 {
     margin-bottom: 8px;
+
     font-size: 18px;
+
     line-height: 1.3;
 }
 
 .product-card p {
     color: #777;
+
     font-size: 14px;
+
     line-height: 1.5;
 }
 
 .price {
     font-size: 20px;
+
     font-weight: bold;
+
     color: #e60012;
+
     margin: 10px 0;
 }
 
-/* ================= PRODUCT IMAGE UPLOAD ================= */
+
+/* =========================================================
+   PRODUCT IMAGE UPLOAD
+   ========================================================= */
 
 .product-image-upload {
     width: 100%;
+
     margin-bottom: 15px;
 }
 
@@ -572,6 +712,7 @@ table img,
     display: block;
 
     font-weight: bold;
+
     font-size: 14px;
 
     margin-bottom: 8px;
@@ -587,6 +728,7 @@ table img,
     margin-bottom: 12px;
 
     border: 2px dashed #ddd;
+
     border-radius: 10px;
 
     background: #fafafa;
@@ -598,72 +740,113 @@ table img,
 
 .product-image-upload input[type="file"]:hover {
     border-color: #e60012;
+
     background: #fff;
 }
 
-/* ================= IMAGE PREVIEW ================= */
+.product-image-upload input[type="file"]::file-selector-button {
+    border: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-right: 8px;
+}
+
+.product-image-upload input[type="file"]::file-selector-button:hover {
+    background: #e60012;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE PREVIEW
+   ========================================================= */
 
 .product-image-preview {
     width: 100%;
-    min-height: 200px;
+
+    height: 220px;
 
     border: 2px dashed #ddd;
+
     border-radius: 12px;
 
     background: #f7f7f7;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
 
-    overflow: hidden;
+    align-items: center;
+
+    justify-content: center;
 
     position: relative;
 
-    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.product-image-preview.empty::before {
+    content: "";
+
+    display: none;
+}
+
+.product-image-preview span {
+    color: #999;
+
+    font-size: 14px;
+
+    text-align: center;
 }
 
 .product-image-preview img {
     width: 100%;
-    height: 200px;
+
+    height: 100%;
 
     object-fit: contain;
-    object-position: center;
 
-    display: block;
+    object-position: center;
 
     background: white;
 }
 
-.product-image-preview.empty::before {
-    content: "Product Image Preview";
 
-    color: #999;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* ================= REMOVE IMAGE BUTTON ================= */
+/* =========================================================
+   REMOVE IMAGE BUTTON
+   ========================================================= */
 
 .remove-product-image {
     position: absolute;
 
     top: 8px;
+
     right: 8px;
 
-    width: 32px;
-    height: 32px;
+    width: 34px;
+
+    height: 34px;
 
     border-radius: 50%;
 
     background: #e60012;
+
     color: white;
 
-    font-size: 16px;
+    font-size: 22px;
+
     font-weight: bold;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     z-index: 5;
@@ -673,16 +856,22 @@ table img,
     background: #c90010;
 }
 
-/* ================= MODAL ================= */
+
+/* =========================================================
+   MODAL
+   ========================================================= */
 
 .modal {
     position: fixed;
+
     inset: 0;
 
     background: rgba(0,0,0,.65);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
@@ -694,9 +883,11 @@ table img,
 
 .modal-content {
     width: 450px;
+
     max-width: 100%;
 
     max-height: 90vh;
+
     overflow-y: auto;
 
     background: white;
@@ -717,7 +908,10 @@ table img,
     margin-top: 10px;
 }
 
-/* ================= SECURITY ================= */
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
 
 .security-box {
     background: white;
@@ -736,17 +930,22 @@ table img,
     color: #008000;
 }
 
-/* ================= TOAST ================= */
+
+/* =========================================================
+   TOAST
+   ========================================================= */
 
 .toast {
     position: fixed;
 
     right: 25px;
+
     bottom: 25px;
 
     max-width: 350px;
 
     background: #111;
+
     color: white;
 
     padding: 15px 20px;
@@ -765,6 +964,7 @@ table img,
     display: block;
 }
 
+
 /* =========================================================
    TABLET
    ========================================================= */
@@ -777,6 +977,7 @@ table img,
 
     .main-content {
         margin-left: 210px;
+
         width: calc(100% - 210px);
     }
 
@@ -803,8 +1004,9 @@ table img,
     }
 }
 
+
 /* =========================================================
-   MOBILE PHONE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -813,16 +1015,15 @@ table img,
         overflow-x: hidden;
     }
 
-    /* ---------- LOGIN ---------- */
-
     .login-screen {
         padding: 15px;
-        align-items: center;
     }
 
     .login-card {
         width: 100%;
+
         padding: 25px 20px;
+
         border-radius: 14px;
     }
 
@@ -832,6 +1033,7 @@ table img,
 
     .logo span {
         font-size: 11px;
+
         letter-spacing: 5px;
     }
 
@@ -841,6 +1043,7 @@ table img,
 
     .subtitle {
         font-size: 14px;
+
         margin-bottom: 20px;
     }
 
@@ -850,10 +1053,12 @@ table img,
 
     .tab {
         padding: 11px 7px;
+
         font-size: 12px;
     }
 
-    /* ---------- OTP ---------- */
+
+    /* OTP */
 
     .otp-screen {
         padding: 15px;
@@ -861,22 +1066,27 @@ table img,
 
     .otp-card {
         width: 100%;
+
         padding: 28px 20px;
     }
 
-    /* ---------- SYSTEM ---------- */
+
+    /* SYSTEM */
 
     .system {
         display: block;
+
         min-height: 100vh;
     }
 
-    /* ---------- SIDEBAR ---------- */
+
+    /* SIDEBAR */
 
     .sidebar {
         position: static;
 
         width: 100%;
+
         min-height: auto;
 
         padding: 15px;
@@ -886,11 +1096,13 @@ table img,
 
     .sidebar-logo {
         font-size: 22px;
+
         margin-bottom: 15px;
     }
 
     .sidebar nav {
         display: grid;
+
         grid-template-columns:
             repeat(2, 1fr);
 
@@ -915,10 +1127,12 @@ table img,
         margin-top: 12px;
     }
 
-    /* ---------- MAIN ---------- */
+
+    /* MAIN */
 
     .main-content {
         margin-left: 0;
+
         width: 100%;
     }
 
@@ -946,7 +1160,8 @@ table img,
         padding: 15px;
     }
 
-    /* ---------- DASHBOARD ---------- */
+
+    /* DASHBOARD */
 
     .cards {
         grid-template-columns:
@@ -957,11 +1172,13 @@ table img,
 
     .stat-card {
         padding: 17px 14px;
+
         border-left-width: 3px;
     }
 
     .stat-card h3 {
         font-size: 12px;
+
         margin-bottom: 10px;
     }
 
@@ -969,7 +1186,8 @@ table img,
         font-size: 23px;
     }
 
-    /* ---------- SECTION HEADER ---------- */
+
+    /* SECTION */
 
     .section-header {
         align-items: stretch;
@@ -987,7 +1205,8 @@ table img,
         width: 100%;
     }
 
-    /* ---------- TABLE ---------- */
+
+    /* TABLE */
 
     .table-wrapper {
         border-radius: 8px;
@@ -999,6 +1218,7 @@ table img,
 
     table {
         min-width: 600px;
+
         font-size: 12px;
     }
 
@@ -1012,12 +1232,14 @@ table img,
     .product-table-img,
     .admin-product-img {
         width: 60px;
-        height: 48px;
+
+        height: 50px;
 
         border-radius: 6px;
     }
 
-    /* ---------- PRODUCT GRID ---------- */
+
+    /* PRODUCTS */
 
     .product-grid {
         grid-template-columns:
@@ -1038,6 +1260,7 @@ table img,
 
     .product-card h3 {
         font-size: 14px;
+
         margin-bottom: 5px;
     }
 
@@ -1047,20 +1270,19 @@ table img,
 
     .price {
         font-size: 16px;
+
         margin: 7px 0;
     }
 
-    /* ---------- IMAGE PREVIEW ---------- */
+
+    /* IMAGE PREVIEW */
 
     .product-image-preview {
-        min-height: 150px;
+        height: 180px;
     }
 
-    .product-image-preview img {
-        height: 150px;
-    }
 
-    /* ---------- MODAL ---------- */
+    /* MODAL */
 
     .modal {
         padding: 12px;
@@ -1070,6 +1292,7 @@ table img,
 
     .modal-content {
         width: 100%;
+
         max-width: 100%;
 
         padding: 22px 18px;
@@ -1079,7 +1302,8 @@ table img,
         max-height: 92vh;
     }
 
-    /* ---------- SECURITY ---------- */
+
+    /* SECURITY */
 
     .security-box {
         padding: 18px;
@@ -1089,10 +1313,12 @@ table img,
         line-height: 1.8;
     }
 
-    /* ---------- TOAST ---------- */
+
+    /* TOAST */
 
     .toast {
         left: 15px;
+
         right: 15px;
 
         bottom: 15px;
@@ -1105,8 +1331,9 @@ table img,
     }
 }
 
+
 /* =========================================================
-   SMALL MOBILE PHONE
+   SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 400px) {
@@ -1163,39 +1390,39 @@ table img,
 
     .sidebar nav button {
         font-size: 11px;
+
         padding: 10px 5px;
     }
 
-    /* ---------- IMAGE PREVIEW ---------- */
-
     .product-image-preview {
-        min-height: 130px;
-    }
-
-    .product-image-preview img {
-        height: 130px;
+        height: 150px;
     }
 }
 
+
 /* =========================================================
-   EXTRA IMAGE SAFETY
+   IMAGE SAFETY
    ========================================================= */
 
 .product-card img,
 .product-card .product-image,
 .product-card .product-img {
     aspect-ratio: 4 / 3;
+
     object-fit: contain;
+
     object-position: center;
 }
 
 table img {
     object-fit: contain !important;
+
     object-position: center;
 }
 
+
 /* =========================================================
-   PRODUCT IMAGE LOADING
+   IMAGE LOADING
    ========================================================= */
 
 .product-image-preview img,
@@ -1205,39 +1432,5 @@ table img {
 .admin-product-img,
 .product-table-img {
     image-rendering: auto;
-}
-
-/* Broken / empty image appearance */
-
-.product-card img[src=""],
-.product-card img:not([src]) {
-    display: none;
-}
-
-/* =========================================================
-   IMAGE UPLOAD DRAG AREA
-   ========================================================= */
-
-.product-image-upload {
-    position: relative;
-}
-
-.product-image-upload input[type="file"]::file-selector-button {
-    border: none;
-
-    background: #111;
-    color: white;
-
-    padding: 8px 12px;
-
-    border-radius: 6px;
-
-    cursor: pointer;
-
-    margin-right: 8px;
-}
-
-.product-image-upload input[type="file"]::file-selector-button:hover {
-    background: #e60012;
 }
 ```
